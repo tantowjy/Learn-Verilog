@@ -1,0 +1,10 @@
+// OR gate using behavioural modeling
+module or_gate_b (y,a,b);
+
+input a;
+output y;
+
+always @ (a,b);
+y = a | b;
+
+endmodule 

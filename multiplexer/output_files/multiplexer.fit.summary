@@ -1,13 +1,13 @@
-Fitter Status : Successful - Mon Nov 04 05:01:16 2024
+Fitter Status : Successful - Wed Nov 06 18:15:07 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : multiplexer
-Top-level Entity Name : mux_2_to_1
+Top-level Entity Name : mux_8_to_1_with_4_to_1
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 1 / 32,070 ( < 1 % )
+Logic utilization (in ALMs) : 3 / 32,070 ( < 1 % )
 Total registers : 0
-Total pins : 4 / 457 ( < 1 % )
+Total pins : 12 / 457 ( 3 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
 Total RAM Blocks : 0 / 397 ( 0 % )

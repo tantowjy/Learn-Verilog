@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Mon Nov 04 04:59:59 2024
+Analysis & Synthesis Status : Successful - Wed Nov 06 18:14:07 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : multiplexer
-Top-level Entity Name : mux_2_to_1
+Top-level Entity Name : mux_8_to_1_with_4_to_1
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 4
+Total pins : 12
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

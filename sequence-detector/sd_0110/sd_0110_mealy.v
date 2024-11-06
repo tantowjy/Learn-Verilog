@@ -10,7 +10,7 @@ module sd_0110_mealy (
     parameter S0 = 2'b00;
     parameter S1 = 2'b01;
     parameter S2 = 2'b10;
-	 parameter S3 = 2'b11;
+	parameter S3 = 2'b11;
 
     reg [1:0] current_state, next_state;
 
@@ -54,12 +54,12 @@ module sd_0110_mealy (
                 end else
                     next_state = S1;
             end
-				S3: begin
-					 if (din == 0) begin
-						  next_state = S1;
-					 end else
-						  next_state = S0;
-				end
+			S3: begin
+				if (din == 0) begin
+					next_state = S1;
+				end else
+					next_state = S0;
+			end
             default: next_state = S0;
         endcase
     end

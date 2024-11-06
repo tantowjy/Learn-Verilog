@@ -4,7 +4,7 @@ module sd_0110_mealy_tb();
     reg reset;
     reg din;
     wire dout;
-	 wire [3:0] led;
+	wire [3:0] led;
 
     // Instansiasi modul DUT
     sd_0110_mealy uut (.clk(clk), .reset(reset), .din(din), .dout(dout), .led(led));
@@ -32,11 +32,11 @@ module sd_0110_mealy_tb();
         #10; din = 1;
         #10; din = 1;
         #10; din = 0;
-		  #10; din = 0;
+		#10; din = 0;
 
         // Selesai
         #10;
-		  $finish;
+		$finish;
     end
 
 endmodule 

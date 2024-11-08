@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Nov 03 19:40:30 2024
+Analysis & Synthesis Status : Successful - Fri Nov 08 23:42:07 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : sd_101
-Top-level Entity Name : sd_101_mealy
+Top-level Entity Name : sd_101_moore
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 5
-Total pins : 7
+Total registers : 3
+Total pins : 4
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

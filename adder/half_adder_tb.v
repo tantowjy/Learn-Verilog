@@ -1,5 +1,4 @@
 module half_adder_tb;
-
     // Inputs
     reg A, B;
     
@@ -21,4 +20,5 @@ module half_adder_tb;
         A = 1; B = 0; #10;  // Expected: Sum = 1, Carry = 0
         A = 1; B = 1; #10;  // Expected: Sum = 0, Carry = 1
     end
+
 endmodule

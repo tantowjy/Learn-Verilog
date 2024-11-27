@@ -1,5 +1,4 @@
 module full_adder_tb;
-
     reg A, B, Cin;
     wire Sum, Cout;
 

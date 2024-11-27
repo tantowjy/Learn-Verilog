@@ -2,7 +2,7 @@ module full_adder_halfAdder_tb;
     reg A, B, Cin;
     wire Sum, Cout;
     
-    full_adder_with_halfAdder uut (
+    full_adder_halfAdder uut (
         .A(A),
         .B(B),
         .Cin(Cin),

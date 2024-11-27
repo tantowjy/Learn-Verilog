@@ -5,6 +5,7 @@
 *.syn
 *.mpf
 transcript
+*.mti
 
 # Work library directories
 work/

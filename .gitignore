@@ -3,9 +3,8 @@
 *.log
 *.rpt
 *.syn
-*.mpf
-transcript
 *.mti
+transcript
 
 # Work library directories
 work/

@@ -1,6 +1,6 @@
 // Variational Autoencoder Neural Network
 
-module VAE_OX_Patterns (
+module VAE_OX_Pattern (
     input wire clk,                         // Clock signal
     input wire mode,                        // Mode: 1 = training, 0 = testing
     input wire In1, In2, In3,               // Input data signals (1-bit binary)
@@ -51,7 +51,7 @@ module VAE_OX_Patterns (
 
     // Parameters for learning
     // Convert 0.1 to Q16.16 format (0.1 * 2^16 = 6554)
-    parameter signed [31:0] LEARNING_RATE = 32'h00001966;  
+    parameter signed [31:0] LEARNING_RATE = 32'h000006666;  
     // Convert 0.5 to Q16.16 format (0.5 * 2^16 = 32768)
     parameter signed [31:0] THRESHOLD = 32'h00008000;      
     parameter integer MAX_ITERATIONS = 500;
@@ -71,7 +71,10 @@ module VAE_OX_Patterns (
     function signed [31:0] relu;
         input signed [31:0] inRelu;
         begin
-            relu = (inRelu > 0) ? inRelu : 0;
+            if (inRelu > 32'h00100000)
+                relu = 32'h00100000;
+            else
+                relu = (inRelu > 0) ? inRelu : 0;
         end
     endfunction
 
@@ -88,9 +91,9 @@ module VAE_OX_Patterns (
         i = 0; k = 0;
         // Initialize weights with small values in Q16.16 format (0.125 * 2^16 = 8192)
         // Setting values for w2_c1_1 to w2_c1_9
-        w2_c1_1 = 32'h00002000; w2_c1_2 = 32'h00002000; w2_c1_3 = 32'h00002000;
-        w2_c1_4 = 32'h00002000; w2_c1_5 = 32'h00002000; w2_c1_6 = 32'h00002000;
-        w2_c1_7 = 32'h00002000; w2_c1_8 = 32'h00002000; w2_c1_9 = 32'h00002000;
+        w2_c1_1 = 32'h00008000; w2_c1_2 = 32'h00008000; w2_c1_3 = 32'h00008000;
+        w2_c1_4 = 32'h00008000; w2_c1_5 = 32'h00008000; w2_c1_6 = 32'h00008000;
+        w2_c1_7 = 32'h00008000; w2_c1_8 = 32'h00008000; w2_c1_9 = 32'h00008000;
 
         // Setting values for w2_d1_1 to w2_d1_9
         w2_d1_1 = 32'h00002000; w2_d1_2 = 32'h00002000; w2_d1_3 = 32'h00002000;
@@ -227,16 +230,29 @@ module VAE_OX_Patterns (
                 Out8 = relu(z3_8);
                 Out9 = relu(z3_9);
 
+                // Convert output to proper format with scaling and clamping
+                Out1 = (z3_1 > 32'h00100000) ? 16'hFFFF : (z3_1[31:16] + z3_1[15]);
+                Out2 = (z3_2 > 32'h00100000) ? 16'hFFFF : (z3_2[31:16] + z3_2[15]);
+                Out3 = (z3_3 > 32'h00100000) ? 16'hFFFF : (z3_3[31:16] + z3_3[15]);
+                Out4 = (z3_4 > 32'h00100000) ? 16'hFFFF : (z3_4[31:16] + z3_4[15]);
+                Out5 = (z3_5 > 32'h00100000) ? 16'hFFFF : (z3_5[31:16] + z3_5[15]);
+                Out6 = (z3_6 > 32'h00100000) ? 16'hFFFF : (z3_6[31:16] + z3_6[15]);
+                Out7 = (z3_7 > 32'h00100000) ? 16'hFFFF : (z3_7[31:16] + z3_7[15]);
+                Out8 = (z3_8 > 32'h00100000) ? 16'hFFFF : (z3_8[31:16] + z3_8[15]);
+                Out9 = (z3_9 > 32'h00100000) ? 16'hFFFF : (z3_9[31:16] + z3_9[15]);
+
                 // Reconstruction error (E_rec)
-                E_rec = - ((In1 * $ln(a3_1)) + ((1 - In1) * $ln(1 - a3_1)) + 
-                    (In2 * $ln(a3_2)) + ((1 - In2) * $ln(1 - a3_2)) +
-                    (In3 * $ln(a3_3)) + ((1 - In3) * $ln(1 - a3_3)) +
-                    (In4 * $ln(a3_4)) + ((1 - In4) * $ln(1 - a3_4)) +
-                    (In5 * $ln(a3_5)) + ((1 - In5) * $ln(1 - a3_5)) +
-                    (In6 * $ln(a3_6)) + ((1 - In6) * $ln(1 - a3_6)) +
-                    (In7 * $ln(a3_7)) + ((1 - In7) * $ln(1 - a3_7)) +
-                    (In8 * $ln(a3_8)) + ((1 - In8) * $ln(1 - a3_8)) +
-                    (In9 * $ln(a3_9)) + ((1 - In9) * $ln(1 - a3_9))
+                E_rec = multiply(
+                    (a3_1 - to_fixed(dataTarget1[j])) + 
+                    (a3_2 - to_fixed(dataTarget2[j])) +
+                    (a3_3 - to_fixed(dataTarget3[j])) +
+                    (a3_4 - to_fixed(dataTarget4[j])) +
+                    (a3_5 - to_fixed(dataTarget5[j])) +
+                    (a3_6 - to_fixed(dataTarget6[j])) +
+                    (a3_7 - to_fixed(dataTarget7[j])) +
+                    (a3_8 - to_fixed(dataTarget8[j])) +
+                    (a3_9 - to_fixed(dataTarget9[j])),
+                    32'h00010000  // Scaling factor
                 );
 
                 // Regularization error (KL divergence)

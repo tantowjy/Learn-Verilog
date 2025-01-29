@@ -8,25 +8,113 @@ z2
 !i10f 100
 cModel Technology
 dA:/A3/Git/Learn-Verilog/neural-network
+vVAE_OX
+Z0 !s110 1738113908
+!i10b 1
+!s100 ed`X8GUgQmi^?bQgYgg<z1
+Id2VlWZDDX@<>dHFzS<YXj3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dA:/A3/Git/Learn-Verilog/variational-autoencoder
+w1737187287
+8A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX.v
+FA:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1738113908.000000
+!s107 A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX.v|
+!s90 -reportprogress|300|-work|work|-stats=none|A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@v@a@e_@o@x
+vVAE_OX_Pattern
+R0
+!i10b 1
+!s100 >hGj0EI1ej>Rk^Rf`OOVA2
+I@_I1]=Z1??OiAWhV166LG3
+R1
+R2
+w1738113570
+Z7 8A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_Pattern.v
+Z8 FA:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_Pattern.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+Z9 !s107 A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_Pattern.v|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_Pattern.v|
+!i113 1
+R5
+R6
+n@v@a@e_@o@x_@pattern
+vVAE_OX_Pattern_tb
+R0
+!i10b 1
+!s100 iSQKMJ0KllI:NT^EL^n3E0
+IM@REenL3e[OL7J_2_Z0bc0
+R1
+R2
+w1738113576
+8A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_Pattern_tb.v
+FA:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_Pattern_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_Pattern_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_Pattern_tb.v|
+!i113 1
+R5
+R6
+n@v@a@e_@o@x_@pattern_tb
 vVAE_OX_Patterns
 !s110 1738112115
 !i10b 1
 !s100 H2DANlB[hA^YVeEhd_b4R1
 Iz<07TP_5SP>;UN:fkViLK1
-VDg1SIo80bB@j0V0VzS_@n1
-dA:/A3/Git/Learn-Verilog/variational-autoencoder
+R1
+R2
 w1738018076
-8A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_Pattern.v
-FA:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_Pattern.v
+R7
+R8
 L0 3
-OV;L;10.5b;63
+R3
 r1
 !s85 0
 31
 !s108 1738112115.000000
-!s107 A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_Pattern.v|
-!s90 -reportprogress|300|-work|work|-stats=none|A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_Pattern.v|
+R9
+R10
 !i113 1
-o-work work
-tCvgOpt 0
+R5
+R6
 n@v@a@e_@o@x_@patterns
+vVAE_OX_tb
+R0
+!i10b 1
+!s100 0JKd2iY?malHU[MX@=2Xm0
+I?V>OKjP<>lMkXZPAI;2I^3
+R1
+R2
+w1737188267
+8A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_tb.v
+FA:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|A:/A3/Git/Learn-Verilog/variational-autoencoder/VAE_OX_tb.v|
+!i113 1
+R5
+R6
+n@v@a@e_@o@x_tb
